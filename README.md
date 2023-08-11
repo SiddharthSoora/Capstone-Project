@@ -1,5 +1,23 @@
-# Capstone-Project
-Capstone Project for MultiModal Text Analysis and Processing
+User - Server(Us)(Model)
 
-#Question Answering
-We are using T5 Model to help us generate questions on the given text. 
+User: File upload - PDF - 2 - 1. Text 2. Images
+2 Models 
+2: images Cap - Sid  - inp - Images - Return - text
+1: Text  - Soora -  inp - Text inp = text   return - questions +mcq 
+
+Output - Frontend
+
+
+Kunal + Prateek - 
+Input = file.pdf
+Output - kunal - Text 
+Storage - .txt
+Output - Prateek - Images
+Folder - Images 
+
+
+16th 
+ 
+
+
+
