@@ -6,6 +6,8 @@ from nltk import FreqDist
 from nltk.corpus import brown
 from similarity.normalized_levenshtein import NormalizedLevenshtein
 import numpy
+import time 
+from text_gen.mcq.mcq import tokenize_sentences , get_keywords
 
 
 class Qgen:
@@ -29,3 +31,17 @@ class Qgen:
         torch.manual_seed(seed)
         if torch.cuda.is_available():
             torch.cuda.manual_seed_all(seed)
+
+    def mcq_predict(self, context):
+        start = time.time()
+        inp = {
+            "input_text" : context.get("input_text"),
+            "max_questions" : context.get("max_questions" , 4)
+        }
+
+        text = inp["input_text"]
+        sentences = tokenize_sentences(text)
+        joiner = " "
+        modified_text = joiner.join(sentences)
+
+        keywords = get_keywords(self.nlp,modified_text,inp['max_questions'],self.s2v,self.fdist,self.normalized_levenshtein,len(sentences) )
