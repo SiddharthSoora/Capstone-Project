@@ -1,23 +1,9 @@
-User - Server(Us)(Model)
+# Capstone Project 2023
 
-User: File upload - PDF - 2 - 1. Text 2. Images
-2 Models 
-2: images Cap - Sid  - inp - Images - Return - text
-1: Text  - Soora -  inp - Text inp = text   return - questions +mcq 
+Python Version - 3.9.13
+Pytorch Version - 1.2.1
+Nvidia Cuda Version - 11.7 (cud117)
 
-Output - Frontend
-
-
-Kunal + Prateek - 
-Input = file.pdf
-Output - kunal - Text 
-Storage - .txt
-Output - Prateek - Images
-Folder - Images 
-
-
-16th 
- 
 
 
 
