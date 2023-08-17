@@ -35,6 +35,6 @@ def predict_step(image_paths):
   return preds
 
 
-print(predict_step(['./download.jpeg'])) # ['a woman in a hospital bed with a woman in a hospital bed']
+print(predict_step(['./try.jpg'])) # ['a woman in a hospital bed with a woman in a hospital bed']
 end_t = time.time()
 print(f"Time taken: {int(end_t - start_t)} seconds")
