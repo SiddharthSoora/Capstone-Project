@@ -26,12 +26,12 @@ from nltk.tokenize import sent_tokenize
 from flashtext import KeywordProcessor
 import sys
 sys.path.append("../")
-from text_gen.encoding.encode import beam_search_decoding
-from text_gen.mcq.mcq import tokenize_sentences
-from text_gen.mcq.mcq import get_keywords
-from text_gen.mcq.mcq import get_sentences_for_keyword
-from text_gen.mcq.mcq import generate_questions_mcq
-from text_gen.mcq.mcq import generate_normal_questions
+from encoding.encode import beam_search_decoding
+from mcq.mcq import tokenize_sentences
+from mcq.mcq import get_keywords
+from mcq.mcq import get_sentences_for_keyword
+from mcq.mcq import generate_questions_mcq
+from mcq.mcq import generate_normal_questions
 import time
 
 class QGen:
@@ -48,7 +48,7 @@ class QGen:
         self.model = model
         self.nlp = spacy.load('en_core_web_sm')
 
-        self.s2v = Sense2Vec().from_disk('s2v_old')
+        self.s2v = Sense2Vec().from_disk('D:\Capstone-Project\model\s2v_old')
 
         self.fdist = FreqDist(brown.words())
         self.normalized_levenshtein = NormalizedLevenshtein()
