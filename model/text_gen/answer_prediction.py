@@ -46,3 +46,4 @@ class answer_prediction:
         output = Question.strip().capitalize()
 
         return output
+
