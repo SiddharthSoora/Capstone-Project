@@ -48,7 +48,7 @@ class QGen:
         self.model = model
         self.nlp = spacy.load('en_core_web_sm')
 
-        self.s2v = Sense2Vec().from_disk('D:\Capstone-Project\model\s2v_old')
+        self.s2v = Sense2Vec().from_disk('C:\\Users\\LENOVO\\OneDrive\\Desktop\\6thSem\\Capstone\\Capstone-Project\\model\\s2v_old')
 
         self.fdist = FreqDist(brown.words())
         self.normalized_levenshtein = NormalizedLevenshtein()
@@ -288,3 +288,4 @@ class AnswerPredictor:
         output = Question.strip().capitalize()
 
         return output
+
