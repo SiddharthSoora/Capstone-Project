@@ -47,9 +47,8 @@ class QGen:
         self.device = device
         self.model = model
         self.nlp = spacy.load('en_core_web_sm')
-
-        self.s2v = Sense2Vec().from_disk('C:\\Users\\LENOVO\\OneDrive\\Desktop\\6thSem\\Capstone\\Capstone-Project\\model\\s2v_old')
-
+        path = 'D:\Capstone-Project\model\s2v_old' #change this path to your local path
+        self.s2v = Sense2Vec().from_disk(path)
         self.fdist = FreqDist(brown.words())
         self.normalized_levenshtein = NormalizedLevenshtein()
         self.set_seed(42)
