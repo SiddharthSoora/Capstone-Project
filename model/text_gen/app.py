@@ -39,7 +39,6 @@ def Streamlit():
                 mcqs.append(o[i]["Correct Answer:"].capitalize())
                 for y in o[i]["Options:"]:
                     mcqs.append(y)
-                num = 0
                 answer = st.radio("a", mcqs, label_visibility='hidden')
                 btn = st.button('Submit'+' answer '+ "'"+answer+"'")
                 if btn:

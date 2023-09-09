@@ -47,7 +47,7 @@ class QGen:
         self.device = device
         self.model = model
         self.nlp = spacy.load('en_core_web_sm')
-        path = 'D:\Capstone-Project\model\s2v_old' #cganh
+        path = 'C:\\Users\\LENOVO\\OneDrive\\Desktop\\6thSem\\Capstone\\Capstone-Project\\model\\s2v_old' #cganh
         self.s2v = Sense2Vec().from_disk(path)
         self.fdist = FreqDist(brown.words())
         self.normalized_levenshtein = NormalizedLevenshtein()
@@ -106,7 +106,7 @@ class QGen:
     def predict_shortq(self, payload):
         inp = {
             "input_text": payload.get("input_text"),
-            "max_questions": payload.get("max_questions", 4)
+            "max_questions": payload.get("max_questions", 6)
         }
 
         text = inp['input_text']
